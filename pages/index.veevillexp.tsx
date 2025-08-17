@@ -24,7 +24,7 @@ export default function VeevillexpHome() {
         <div id="features" className="snap-start min-h-screen">
           <Features />
         </div>
-        <div id="target-audience" className="snap-start min-h-screen">
+        {/* <div id="target-audience" className="snap-start min-h-screen">
           <TargetAudience />
         </div>
         <div id="client-logos" className="snap-start min-h-screen">
@@ -38,7 +38,7 @@ export default function VeevillexpHome() {
         </div>
         <div id="contact" className="snap-start min-h-screen">
           <ContactForm />
-        </div>
+        </div> */}
       </main>
     </div>
   );

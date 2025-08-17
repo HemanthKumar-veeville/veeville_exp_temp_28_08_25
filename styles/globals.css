@@ -2,7 +2,9 @@
 @import "tw-animate-css";
 
 /* Import Google Fonts for exact Figma matching */
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Pro:wght@182;296;433;622;727&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Pro:wght@182;296;433;500;600;622;700;727&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -127,6 +129,11 @@
   font-weight: 433;
 }
 
+@utility font-sofia-medium {
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 500;
+}
+
 @utility font-sofia-semibold {
   font-family: 'Sofia Pro', sans-serif;
   font-weight: 622;
@@ -134,6 +141,27 @@
 
 @utility font-sofia-bold {
   font-family: 'Sofia Pro', sans-serif;
+  font-weight: 727;
+}
+
+/* Additional font weight utilities for Tailwind compatibility */
+@utility font-light {
+  font-weight: 296;
+}
+
+@utility font-normal {
+  font-weight: 433;
+}
+
+@utility font-medium {
+  font-weight: 500;
+}
+
+@utility font-semibold {
+  font-weight: 622;
+}
+
+@utility font-bold {
   font-weight: 727;
 }
 

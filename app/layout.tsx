@@ -27,10 +27,6 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Sofia+Pro:wght@182;296;433;622;727&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body>
         <main>{children}</main>

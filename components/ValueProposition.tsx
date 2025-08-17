@@ -5,11 +5,11 @@ export default function ValueProposition() {
   return (
     <>
       {/* Desktop Version */}
-      <section className="hidden lg:block w-full h-screen bg-[#d9d9d9] pt-8 flex items-center">
+      <section className=" lg:block w-full h-screen bg-[#d9d9d9] pt-8 flex items-center">
         <div className="max-w-[1440px] mx-auto px-4 lg:px-8 xl:px-12 w-full">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 xl:gap-8 items-center h-full">
+          <div className="grid grid-cols-1 xl:grid-cols-5 gap-6 xl:gap-8 items-center h-full">
             {/* Main Content */}
-            <div className="order-1 xl:order-1">
+            <div className="order-1 xl:order-1 xl:col-span-3">
               <h1 className="font-georgia text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[0.99] text-[#1c1c1c] mb-6 lg:mb-8 xl:mb-10">
                 Where grown-ups
                 <br />
@@ -32,7 +32,7 @@ export default function ValueProposition() {
             </div>
 
             {/* Character with Flag Illustration */}
-            <div className="order-2 xl:order-2 flex justify-center xl:justify-end items-center">
+            <div className="order-2 xl:order-2 xl:col-span-2 flex justify-center xl:justify-end items-center">
               <div className="relative w-full max-w-sm xl:max-w-md 2xl:max-w-lg">
                 <Image
                   src="/images/character-flag.svg"
