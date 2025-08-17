@@ -4,7 +4,7 @@ import Image from "next/image";
 interface FeatureProps {
   title: string;
   illustration: string;
-  description: string;
+  description: string[] | string;
   className?: string;
 }
 
@@ -30,7 +30,23 @@ function FeatureItem({
             className="object-contain w-full h-auto max-h-[200px] max-w-[200px]"
           />
         </div>
-        <p className="text-black font-sofia-light text-[28px]">{description}</p>
+        {Array.isArray(description) ? (
+          description.map((line, index) => (
+            <>
+              <p
+                key={index}
+                className="text-black font-sofia-light text-[28px]"
+              >
+                {line}
+              </p>
+              {index < description.length - 1 && <br />}
+            </>
+          ))
+        ) : (
+          <p className="text-black font-sofia-light text-[28px]">
+            {description}
+          </p>
+        )}
       </div>
 
       {/* Tablet Layout */}
@@ -78,7 +94,7 @@ export default function Features() {
   return (
     <>
       {/* Desktop Version */}
-      <section className="hidden lg:block w-full bg-white py-[10px] xl:py-[12px] overflow-hidden h-full max-h-screen">
+      <section className="hidden lg:block w-full bg-white py-[25px] xl:py-[30px] overflow-hidden h-full max-h-screen">
         <div className="max-w-[1440px] mx-auto px-[40px] xl:px-[60px]">
           <h2 className="font-georgia text-[60px] xl:text-[80px] leading-[1.1] xl:leading-[0.99] text-black mb-[40px] xl:mb-[63px] break-words">
             The premise of play
@@ -88,17 +104,19 @@ export default function Features() {
             <FeatureItem
               title="Zero powerpoints"
               illustration="/images/zero-powerpoints.svg"
-              description="Seriously, haven't you seen them all already?
-
-We believe in experiences that stick, not slides that slip away."
+              description={[
+                "Seriously, haven't you seen them all already?",
+                "We believe in experiences that stick, not slides that slip away.",
+              ]}
             />
 
             <FeatureItem
               title="Zero jargon"
               illustration="/images/zero-jargon.svg"
-              description="Nobody knows you better than you do.
-
-We simply create the space for your insights to emerge naturally."
+              description={[
+                "Nobody knows you better than you do.",
+                "We simply create the space for your insights to emerge naturally.",
+              ]}
             />
 
             <FeatureItem
