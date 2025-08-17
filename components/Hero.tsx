@@ -12,7 +12,7 @@ export default function Hero() {
             alt="experiences/"
             width={1242}
             height={223}
-            className="w-48 lg:w-[35rem] xl:w-[40rem] 2xl:w-[45rem] h-auto"
+            className="w-[70vw] h-auto"
             priority
           />
           <Image
@@ -20,7 +20,7 @@ export default function Hero() {
             alt="Veeville."
             width={489}
             height={104}
-            className="w-20 lg:w-[14rem] xl:w-[16rem] 2xl:w-[18rem] h-auto mt-2"
+            className="w-[25vw] h-auto mt-2"
             priority
           />
         </div>
@@ -33,7 +33,7 @@ export default function Hero() {
           alt="Pablo Picasso Hand Quote"
           width={589}
           height={358}
-          className="w-32 lg:w-[20rem] xl:w-[24rem] 2xl:w-[28rem] h-auto"
+          className="w-[25vw] h-auto"
           priority
         />
       </div>
