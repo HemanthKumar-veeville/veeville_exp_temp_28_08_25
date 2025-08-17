@@ -37,10 +37,10 @@ export default function Home() {
           </div>
           <div id="methodology" className="snap-start min-h-screen">
             <Methodology />
-          </div>
+          </div> */}
           <div id="contact" className="snap-start min-h-screen">
             <ContactForm />
-          </div> */}
+          </div>
         </main>
       </div>
     </ErrorBoundary>
