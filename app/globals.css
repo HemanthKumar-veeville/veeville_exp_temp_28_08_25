@@ -16,6 +16,52 @@
   --color-button: #fdfdfe;
 }
 
+/* Snap Scroll Classes */
+.snap-y {
+  scroll-snap-type: y mandatory;
+}
+
+.snap-mandatory {
+  scroll-snap-type: y mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+.snap-center {
+  scroll-snap-align: center;
+}
+
+.snap-end {
+  scroll-snap-align: end;
+}
+
+/* Enhanced Snap Scroll Behavior */
+.snap-y {
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch; /* iOS momentum scrolling */
+  scroll-behavior: smooth;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation Dots Enhancement */
+.nav-dot {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-dot:hover {
+  transform: scale(1.2);
+}
+
+.nav-dot.active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 /* Custom Font Classes */
 .font-georgia {
   font-family: 'Georgia', serif;

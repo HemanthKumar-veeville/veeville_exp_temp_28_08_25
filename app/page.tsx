@@ -14,16 +14,35 @@ import ErrorBoundary from "@/components/ErrorBoundary";
 export default function Home() {
   return (
     <ErrorBoundary>
-      <main className="min-h-screen bg-white w-full overflow-x-hidden">
-        <Hero />
-        <ValueProposition />
-        <Features />
-        <TargetAudience />
-        <ClientLogos />
-        <Testimonials />
-        <Methodology />
-        <ContactForm />
-      </main>
+      <div className="relative">
+        {/* Main Content with Snap Scroll */}
+        <main className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden bg-white">
+          <div id="hero" className="snap-start min-h-screen">
+            <Hero />
+          </div>
+          <div id="value-proposition" className="snap-start min-h-screen">
+            <ValueProposition />
+          </div>
+          <div id="features" className="snap-start min-h-screen">
+            <Features />
+          </div>
+          <div id="target-audience" className="snap-start min-h-screen">
+            <TargetAudience />
+          </div>
+          <div id="client-logos" className="snap-start min-h-screen">
+            <ClientLogos />
+          </div>
+          <div id="testimonials" className="snap-start min-h-screen">
+            <Testimonials />
+          </div>
+          <div id="methodology" className="snap-start min-h-screen">
+            <Methodology />
+          </div>
+          <div id="contact" className="snap-start min-h-screen">
+            <ContactForm />
+          </div>
+        </main>
+      </div>
     </ErrorBoundary>
   );
 }
