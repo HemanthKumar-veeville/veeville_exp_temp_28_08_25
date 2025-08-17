@@ -125,21 +125,28 @@ img {
   height: auto;
 }
 
-/* Custom scrollbar for better UX */
+/* Hide scrollbar completely */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 0;
+  height: 0;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  display: none;
+}
+
+/* Firefox scrollbar hiding */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
