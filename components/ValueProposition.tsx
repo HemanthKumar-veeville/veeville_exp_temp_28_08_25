@@ -11,13 +11,22 @@ const DesktopContent = () => {
         remember how to play
       </h1>
 
-      <div className="space-y-4 lg:space-y-5 xl:space-y-6">
-        <p className="font-sofia-pro font-normal text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-[#1c1c1c] leading-relaxed">
+      <div
+        className="space-y-4 lg:space-y-5 xl:space-y-6"
+        style={{
+          color: "#1C1C1C",
+          fontSize: "34px",
+          fontStyle: "normal",
+          fontWeight: 300,
+          lineHeight: "normal",
+        }}
+      >
+        <p className="font-sofia-pro text-[34px] text-[#1c1c1c]">
           A set of hand-crafted immersive experiences for your team and
           leadership.
         </p>
 
-        <p className="font-sofia-pro font-normal text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-[#1c1c1c] leading-relaxed">
+        <p className="font-sofia-pro text-[34px] text-[#1c1c1c]">
           You never learn better than when you don't know that you are learning.
           Through play, touch, wonder, and experimentation, we help teams
           unlearn biases, collaborate organically, and see challenges with fresh

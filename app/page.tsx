@@ -26,15 +26,17 @@ export default function Home() {
           <div id="features" className="snap-start min-h-screen">
             <Features />
           </div>
-          {/* <div id="target-audience" className="snap-start min-h-screen">
-            <TargetAudience />
-          </div>
           <div id="client-logos" className="snap-start min-h-screen">
             <ClientLogos />
           </div>
           <div id="testimonials" className="snap-start min-h-screen">
             <Testimonials />
           </div>
+          {/* <div id="target-audience" className="snap-start min-h-screen">
+            <TargetAudience />
+          </div>
+        
+         
           <div id="methodology" className="snap-start min-h-screen">
             <Methodology />
           </div> */}

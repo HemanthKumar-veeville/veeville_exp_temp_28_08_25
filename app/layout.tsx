@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import DeviceDetector from "../components/DeviceDetector";
 
 export const metadata: Metadata = {
   title: "Veeville - Where grown-ups remember how to play",
@@ -21,15 +22,11 @@ export default function RootLayout({
           content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' https:; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'self';"
         />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
       </head>
       <body>
-        <main>{children}</main>
+        <DeviceDetector>
+          <main>{children}</main>
+        </DeviceDetector>
       </body>
     </html>
   );

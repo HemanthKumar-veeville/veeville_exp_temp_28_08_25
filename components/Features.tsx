@@ -37,7 +37,7 @@ function FeatureItem({
             alt={title}
             width={100}
             height={100}
-            className="object-contain w-full h-auto max-h-[200px] max-w-[200px]"
+            className="object-contain w-[200px] h-auto max-h-[200px]"
           />
         </div>
         <div
@@ -204,7 +204,7 @@ function DesktopFeatures() {
 
           <FeatureItem
             title="100% surprises"
-            illustration="/images/surprises.svg"
+            illustration="/images/surprises_v1.png"
             description="When did you last leave a workshop talking about it for weeks? We design moments that delight and memories that matter."
             isVisible={feature3Visible}
           />

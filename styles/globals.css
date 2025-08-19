@@ -1,8 +1,153 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Import Google Fonts for exact Figma matching */
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Pro:wght@182;296;433;500;600;622;700;727&display=swap');
+/* Local Sofia Pro Font Face Declarations */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro UltraLight Az.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro UltraLight Italic Az.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro ExtraLight Az.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro ExtraLight Italic Az.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Light Az.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Light Italic Az.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Regular Az.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Regular Italic Az.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Medium Az.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Medium Italic Az.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Semi Bold Az.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Semi Bold Italic Az.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Bold Az.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Bold Italic Az.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Black Az.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Black Italic Az.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* CasualHuman Font Face Declarations */
+@font-face {
+  font-family: 'CasualHuman';
+  src: url('/fonts/CasualHuman-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CasualHuman';
+  src: url('/fonts/CasualHuman-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Import Google Fonts for Georgia and Comic Neue (keeping these as fallbacks) */
 @import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
 
@@ -127,17 +272,22 @@
 
 @utility font-sofia-pro {
   font-family: 'Sofia Pro', sans-serif;
+  color: #000;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 @utility font-casual-human {
-  font-family: 'Comic Neue', cursive;
+  font-family: 'CasualHuman', cursive;
   font-weight: 700;
 }
 
 /* Figma-specific font weights for Sofia Pro */
 @utility font-sofia-light {
   font-family: 'Sofia Pro', sans-serif;
-  font-weight: 296;
+  font-weight: 300;
 }
 
 @utility font-sofia-regular {
