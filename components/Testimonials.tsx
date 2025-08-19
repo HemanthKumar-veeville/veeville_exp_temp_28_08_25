@@ -34,12 +34,12 @@ export default function Testimonials() {
                 <p
                   style={{
                     color: "#000",
-                    fontSize: "34px",
+                    fontSize: "28px",
                     fontStyle: "normal",
                     fontWeight: 300,
                     lineHeight: "normal",
                   }}
-                  className="font-sofia-pro font-light text-[34px] text-black leading-normal mb-[10px] max-w-[1189px]"
+                  className="font-sofia-pro font-light text-[28px] text-black leading-normal mb-[10px] max-w-[1189px]"
                 >
                   {testimonial.quote}
                 </p>

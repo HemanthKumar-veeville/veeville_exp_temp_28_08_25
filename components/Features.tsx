@@ -21,7 +21,7 @@ function FeatureItem({
       {/* Desktop Layout */}
       <div className="hidden lg:block h-full max-h-full">
         <h3
-          className={`text-black font-[622] font-sofia-pro text-[34px] not-italic leading-normal break-words transition-all duration-1000 ease-out ${
+          className={`text-black font-[622] font-sofia-pro text-[28px] not-italic leading-normal break-words transition-all duration-1000 ease-out ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
