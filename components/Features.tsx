@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { H2, H3 } from "./Headings";
+import { HelveticaDescription } from "./Descriptions";
 
 interface FeatureProps {
   title: string;
@@ -18,16 +20,13 @@ function FeatureItem({
 }: FeatureProps) {
   return (
     <div className={`flex flex-col ${className}`}>
-      <h3
-        className={`text-black font-helvetica font-semibold leading-normal break-words transition-all duration-1000 ease-out ${
+      <H3
+        className={`transition-all duration-1000 ease-out ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
         }`}
-        style={{
-          fontSize: "clamp(14px, 2.5vw, 24px)",
-        }}
       >
         {title}
-      </h3>
+      </H3>
       <div
         className={`mb-[10px] sm:mb-[12px] md:mb-[15px] lg:mb-[15px] xl:mb-[17px] flex justify-center transition-all duration-1000 ease-out delay-200 ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
@@ -49,16 +48,15 @@ function FeatureItem({
         {Array.isArray(description) ? (
           description.map((line, index) => (
             <React.Fragment key={index}>
-              <p className="text-black font-sofia-light text-sm sm:text-base md:text-base lg:text-base leading-[1.4] md:leading-[1.3] lg:leading-normal break-words">
+              <HelveticaDescription className="text-sm sm:text-base md:text-base lg:text-base leading-[1.4] md:leading-[1.3] lg:leading-normal">
                 {line}
-              </p>
-              {index < description.length - 1 && <br />}
+              </HelveticaDescription>
             </React.Fragment>
           ))
         ) : (
-          <p className="text-black font-sofia-light text-sm sm:text-base md:text-base lg:text-base leading-[1.4] md:leading-[1.3] lg:leading-normal break-words">
+          <HelveticaDescription className="text-sm sm:text-base md:text-base lg:text-base leading-[1.4] md:leading-[1.3] lg:leading-normal">
             {description}
-          </p>
+          </HelveticaDescription>
         )}
       </div>
     </div>
@@ -115,13 +113,9 @@ export default function Features() {
       className="w-full bg-white py-[30px] sm:py-[40px] md:py-[40px] lg:py-[25px] xl:py-[30px] overflow-hidden h-full max-h-screen"
     >
       <div className="px-[16px] sm:px-[20px] md:px-[30px] lg:px-[40px] xl:px-[60px] max-w-[1440px] mx-auto">
-        <h2 className="font-georgia leading-[1.1] lg:leading-[0.99] text-black mb-[25px] sm:mb-[30px] md:mb-[30px] lg:mb-[40px] xl:mb-[63px] break-words"
-            style={{
-              fontSize: "clamp(22px, 4vw, 80px)",
-            }}>
+        <H2 className="text-[80px] leading-[0.99] text-black mb-[50px]">
           The premise of play
-        </h2>
-
+        </H2>
         <div className="space-y-[30px] sm:space-y-[40px] md:grid md:grid-cols-3 md:gap-[20px] lg:gap-[40px] lg:grid-cols-3 lg:gap-[40px] xl:gap-[60px] 2xl:gap-[160px]">
           <FeatureItem
             title="Zero powerpoints"

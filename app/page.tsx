@@ -7,7 +7,9 @@ import Features from "@/components/Features";
 import ClientLogos from "@/components/ClientLogos";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
+import CraftedMinds from "@/components/CraftedMinds";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import WhatShifts from "@/components/WhatShifts";
 
 export default function Home() {
   return (
@@ -30,6 +32,13 @@ export default function Home() {
           <div id="testimonials" className="snap-start min-h-screen">
             <Testimonials />
           </div>
+          <div id="crafted-minds" className="snap-start min-h-screen">
+            <CraftedMinds />
+          </div>
+          <div id="crafted-minds" className="snap-start min-h-screen">
+            <WhatShifts />
+          </div>
+
           {/* <div id="target-audience" className="snap-start min-h-screen">
             <TargetAudience />
           </div>

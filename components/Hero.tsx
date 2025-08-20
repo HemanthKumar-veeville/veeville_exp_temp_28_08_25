@@ -139,71 +139,12 @@ function HeroImage({ isVisible }: { isVisible: boolean }) {
   );
 }
 
-// Content Overlay for Tablet
-function ContentOverlay({ isVisible }: { isVisible: boolean }) {
-  return (
-    <div
-      className={`absolute inset-0 z-5 flex items-center justify-center transition-opacity duration-1200 ease-in-out ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      <div className="text-center px-8 max-w-md">
-        <h1 className="font-georgia text-3xl font-normal text-[#1c1c1c] mb-4 leading-[0.99]">
-          Where grown-ups remember how to play
-        </h1>
-        <p className="font-helvetica text-base font-normal text-[#1c1c1c] mb-6 leading-relaxed">
-          A set of hand-crafted immersive experiences for your team and
-          leadership.
-        </p>
-        <p className="font-helvetica text-sm font-light text-[#1c1c1c] leading-relaxed">
-          You never learn better than when you don't know that you are learning.
-          Through play, touch, wonder, and experimentation, we help teams
-          unlearn biases, collaborate organically, and see challenges with fresh
-          eyes.
-        </p>
-      </div>
-    </div>
-  );
-}
-
-// Floating Elements for Tablet
-function FloatingElements({ isVisible }: { isVisible: boolean }) {
-  return (
-    <div
-      className={`absolute inset-0 z-1 transition-opacity duration-1500 ease-in-out ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      <div className="absolute top-1/4 right-1/4 animate-bounce">
-        <Image
-          src="/images/creative_box.png"
-          alt="Creative Box"
-          width={60}
-          height={60}
-          className="w-12 h-12 opacity-60"
-        />
-      </div>
-      <div className="absolute bottom-1/3 left-1/4 animate-pulse">
-        <Image
-          src="/images/pokemon_pencil.png"
-          alt="Pokemon Pencil"
-          width={40}
-          height={40}
-          className="w-8 h-8 opacity-50"
-        />
-      </div>
-    </div>
-  );
-}
-
 // Main Hero Component
 export default function Hero() {
   const [logoVisible, setLogoVisible] = useState(true);
   const [logoPositioned, setLogoPositioned] = useState(false);
   const [deskVisible, setDeskVisible] = useState(false);
   const [quoteVisible, setQuoteVisible] = useState(false);
-  const [contentVisible, setContentVisible] = useState(false);
-  const [floatingVisible, setFloatingVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
   const heroRef = useRef<HTMLElement>(null);
 
@@ -216,8 +157,6 @@ export default function Hero() {
             setLogoPositioned(false);
             setDeskVisible(false);
             setQuoteVisible(false);
-            setContentVisible(false);
-            setFloatingVisible(false);
 
             // Start animations with different timing for different screen sizes
             const isMobile = window.innerWidth < 768;
@@ -228,7 +167,6 @@ export default function Hero() {
             if (isMobile) {
               setTimeout(() => {
                 setLogoPositioned(true);
-                setContentVisible(true);
               }, 200);
               setTimeout(() => {
                 setDeskVisible(true);
@@ -239,11 +177,9 @@ export default function Hero() {
             } else if (isTablet) {
               setTimeout(() => {
                 setLogoPositioned(true);
-                setContentVisible(true);
               }, 300);
               setTimeout(() => {
                 setDeskVisible(true);
-                setFloatingVisible(true);
               }, 800);
               setTimeout(() => {
                 setQuoteVisible(true);
@@ -266,8 +202,6 @@ export default function Hero() {
             setLogoPositioned(false);
             setDeskVisible(false);
             setQuoteVisible(false);
-            setContentVisible(false);
-            setFloatingVisible(false);
           }
         });
       },
@@ -296,12 +230,6 @@ export default function Hero() {
       <LogoSection isVisible={logoVisible} isPositioned={logoPositioned} />
       <PabloQuote isVisible={quoteVisible} />
       <HeroImage isVisible={deskVisible} />
-
-      {/* Tablet-specific content */}
-      <div className="hidden md:block lg:hidden">
-        <ContentOverlay isVisible={contentVisible} />
-        <FloatingElements isVisible={floatingVisible} />
-      </div>
     </section>
   );
 }

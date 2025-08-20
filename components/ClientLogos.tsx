@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { H2 } from "./Headings";
 
 const clientLogos = [
   {
@@ -85,9 +86,9 @@ const DesktopClientLogos = () => {
   return (
     <section className="hidden lg:block w-full bg-white py-[25px]">
       <div className="max-w-[1440px] mx-auto px-[60px]">
-        <h2 className="font-georgia text-[80px] leading-[0.99] text-black mb-[50px]">
+        <H2 className="text-[80px] leading-[0.99] text-black mb-[50px]">
           Our clients
-        </h2>
+        </H2>
 
         {/* Custom layout with different column counts per row */}
         <div className="space-y-[50px]">
@@ -122,9 +123,9 @@ const MobileClientLogos = () => {
   return (
     <section className="lg:hidden w-full bg-white py-[40px]">
       <div className="px-[30px]">
-        <h2 className="font-georgia text-[25px] leading-[0.99] text-black mb-[30px]">
+        <H2 className="text-[25px] leading-[0.99] text-black mb-[30px]">
           Our clients
-        </h2>
+        </H2>
 
         {/* Client Logos Grid - 2 columns for mobile */}
         <div className="grid grid-cols-2 gap-x-[20px] gap-y-[30px] items-center justify-items-center">

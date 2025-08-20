@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import { H2 } from "./Headings";
+import { HelveticaDescription, CasualHumanDescription } from "./Descriptions";
 
 const testimonialsData = [
   {
@@ -24,47 +26,27 @@ export default function Testimonials() {
       {/* Desktop Version */}
       <section className="hidden lg:block w-full bg-white py-[25px]">
         <div className="max-w-[1440px] mx-auto px-[69px]">
-          <h2 className="font-georgia text-[80px] leading-[0.99] text-black mb-[35px]">
+          <H2 className="text-[80px] leading-[0.99] text-black mb-[35px]">
             Testimonials
-          </h2>
+          </H2>
 
-          <div className="space-y-[51px] mb-[110px]">
+          <div className="space-y-[51px]">
             {testimonialsData.map((testimonial) => (
               <div key={testimonial.id}>
-                <p
-                  style={{
-                    color: "#000",
-                    fontSize: "28px",
-                    fontStyle: "normal",
-                    fontWeight: 300,
-                    lineHeight: "normal",
-                  }}
-                  className="font-helvetica font-light text-black leading-normal mb-[10px] max-w-[1189px]"
-                >
+                <HelveticaDescription className="font-light text-black leading-normal mb-[10px] max-w-[1189px]">
                   {testimonial.quote}
-                </p>
+                </HelveticaDescription>
 
                 <div className="space-y-[1px]">
-                  <p className="font-casual-human text-[30px] font-light text-black">
+                  <CasualHumanDescription className="text-[30px] font-light">
                     {testimonial.author}
-                  </p>
-                  <p className="font-casual-human text-[30px] font-light text-black">
+                  </CasualHumanDescription>
+                  <CasualHumanDescription className="text-[30px] font-light">
                     {testimonial.company}
-                  </p>
+                  </CasualHumanDescription>
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Testimonials Group Illustration */}
-          <div className="flex justify-center">
-            <Image
-              src="/images/testimonials-group.svg"
-              alt="Group of happy people testimonials"
-              width={1062}
-              height={743}
-              className="object-contain"
-            />
           </div>
         </div>
       </section>
@@ -72,24 +54,24 @@ export default function Testimonials() {
       {/* Mobile Version */}
       <section className="lg:hidden w-full bg-white py-[40px]">
         <div className="px-[30px]">
-          <h2 className="font-georgia text-[25px] leading-[0.99] text-black mb-[30px]">
+          <H2 className="text-[25px] leading-[0.99] text-black mb-[30px]">
             Testimonials
-          </h2>
+          </H2>
 
-          <div className="space-y-[30px] mb-[40px]">
+          <div className="space-y-[30px]">
             {testimonialsData.map((testimonial) => (
               <div key={testimonial.id}>
-                <p className="font-helvetica font-light text-[12px] text-black leading-normal mb-[10px]">
+                <HelveticaDescription className="font-light text-[12px] text-black leading-normal mb-[10px]">
                   {testimonial.quote}
-                </p>
+                </HelveticaDescription>
 
                 <div className="space-y-[2px]">
-                  <p className="font-casual-human text-[12px] font-bold text-black">
+                  <CasualHumanDescription className="text-[12px] font-bold">
                     {testimonial.author}
-                  </p>
-                  <p className="font-casual-human text-[12px] font-bold text-black">
+                  </CasualHumanDescription>
+                  <CasualHumanDescription className="text-[12px] font-bold">
                     {testimonial.company}
-                  </p>
+                  </CasualHumanDescription>
                 </div>
               </div>
             ))}

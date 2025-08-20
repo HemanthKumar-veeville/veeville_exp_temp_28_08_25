@@ -4,9 +4,25 @@
 /* Helvetica Font Family - System Font */
 /* Helvetica is available on most systems, no need for external font files */
 
-/* Import Google Fonts for Georgia and Comic Neue (keeping these as fallbacks) */
+/* Import Google Fonts for Georgia (keeping as fallback) */
 @import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+
+/* Local Casual Human Fonts */
+@font-face {
+  font-family: 'Casual Human';
+  src: url('/fonts/CasualHuman-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Casual Human';
+  src: url('/fonts/CasualHuman-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -137,7 +153,7 @@
 }
 
 @utility font-casual-human {
-  font-family: 'CasualHuman', cursive;
+  font-family: 'Casual Human', cursive;
   font-weight: 700;
 }
 

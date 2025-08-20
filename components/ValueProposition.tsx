@@ -1,28 +1,30 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { H1 } from "./Headings";
+import { HelveticaDescription } from "./Descriptions";
 
 // Content Component with responsive text sizes
 const Content = () => {
   return (
     <div className="order-1 xl:order-1 xl:col-span-3">
-      <h1 className="font-georgia text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[0.99] text-[#1c1c1c] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
+      <H1>
         Where grown-ups
         <br />
         remember how to play
-      </h1>
+      </H1>
 
       <div className="space-y-3 md:space-y-4 lg:space-y-5 xl:space-y-6">
-        <p className="font-helvetica font-normal text-sm sm:text-base md:text-lg lg:text-[28px] xl:text-[28px] text-[#1c1c1c] leading-relaxed lg:leading-normal">
+        <HelveticaDescription className="text-[#1c1c1c]">
           A set of hand-crafted immersive experiences for your team and
           leadership.
-        </p>
+        </HelveticaDescription>
 
-        <p className="font-helvetica font-normal text-sm sm:text-base md:text-lg lg:text-[28px] xl:text-[28px] text-[#1c1c1c] leading-relaxed lg:leading-normal">
+        <HelveticaDescription className="text-[#1c1c1c]">
           You never learn better than when you don't know that you are learning.
           Through play, touch, wonder, and experimentation, we help teams
           unlearn biases, collaborate organically, and see challenges with fresh
           eyes.
-        </p>
+        </HelveticaDescription>
       </div>
     </div>
   );
@@ -101,7 +103,7 @@ export default function ValueProposition() {
   }, [hasAnimated]);
 
   return (
-    <section 
+    <section
       ref={valuePropositionRef}
       className="w-full h-screen bg-[#d9d9d9] pt-6 md:pt-8 flex items-center"
     >
