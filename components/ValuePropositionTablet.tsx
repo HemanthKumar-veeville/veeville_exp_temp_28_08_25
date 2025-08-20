@@ -50,7 +50,9 @@ function ValuePropositionTabletSection() {
             {/* Content Section */}
             <div
               className={`transition-all duration-1200 ease-in-out ${
-                contentVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                contentVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-8 opacity-0"
               }`}
             >
               <h1 className="font-georgia text-3xl md:text-4xl leading-[0.99] text-[#1c1c1c] mb-6">
@@ -60,16 +62,16 @@ function ValuePropositionTabletSection() {
               </h1>
 
               <div className="space-y-4">
-                <p className="font-sofia-pro font-normal text-base md:text-lg text-[#1c1c1c] leading-relaxed">
+                <p className="font-helvetica font-normal text-base md:text-lg text-[#1c1c1c] leading-relaxed">
                   A set of hand-crafted immersive experiences for your team and
                   leadership.
                 </p>
 
-                <p className="font-sofia-pro font-normal text-base md:text-lg text-[#1c1c1c] leading-relaxed">
-                  You never learn better than when you don't know that you are learning.
-                  Through play, touch, wonder, and experimentation, we help teams
-                  unlearn biases, collaborate organically, and see challenges with fresh
-                  eyes.
+                <p className="font-helvetica font-normal text-base md:text-lg text-[#1c1c1c] leading-relaxed">
+                  You never learn better than when you don't know that you are
+                  learning. Through play, touch, wonder, and experimentation, we
+                  help teams unlearn biases, collaborate organically, and see
+                  challenges with fresh eyes.
                 </p>
               </div>
             </div>
@@ -77,7 +79,9 @@ function ValuePropositionTabletSection() {
             {/* Image Section */}
             <div
               className={`flex justify-center transition-all duration-1500 ease-out ${
-                imageVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+                imageVisible
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-full opacity-0"
               }`}
             >
               <div className="relative w-full max-w-xs">

@@ -13,11 +13,11 @@ interface ResponsiveLayoutProps {
 export default function ResponsiveLayout({
   deviceType,
 }: ResponsiveLayoutProps) {
-  const HeroComponent = deviceType === "mobile" ? HeroMobile : HeroTablet;
+  const HeroComponent = deviceType === "mobile" ? HeroMobile : HeroMobile;
   const ValuePropositionComponent =
-    deviceType === "mobile" ? ValuePropositionMobile : ValuePropositionTablet;
+    deviceType === "mobile" ? ValuePropositionMobile : ValuePropositionMobile;
   const FeaturesComponent =
-    deviceType === "mobile" ? FeaturesMobile : FeaturesTablet;
+    deviceType === "mobile" ? FeaturesMobile : FeaturesMobile;
 
   return (
     <div className="relative">

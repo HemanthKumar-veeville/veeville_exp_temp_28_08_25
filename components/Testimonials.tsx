@@ -39,16 +39,16 @@ export default function Testimonials() {
                     fontWeight: 300,
                     lineHeight: "normal",
                   }}
-                  className="font-sofia-pro font-light text-[28px] text-black leading-normal mb-[10px] max-w-[1189px]"
+                  className="font-helvetica font-light text-black leading-normal mb-[10px] max-w-[1189px]"
                 >
                   {testimonial.quote}
                 </p>
 
                 <div className="space-y-[1px]">
-                  <p className="font-casual-human text-[30px] font-bold text-black">
+                  <p className="font-casual-human text-[30px] font-light text-black">
                     {testimonial.author}
                   </p>
-                  <p className="font-casual-human text-[30px] font-bold text-black">
+                  <p className="font-casual-human text-[30px] font-light text-black">
                     {testimonial.company}
                   </p>
                 </div>
@@ -79,7 +79,7 @@ export default function Testimonials() {
           <div className="space-y-[30px] mb-[40px]">
             {testimonialsData.map((testimonial) => (
               <div key={testimonial.id}>
-                <p className="font-sofia-pro font-light text-[12px] text-black leading-normal mb-[10px]">
+                <p className="font-helvetica font-light text-[12px] text-black leading-normal mb-[10px]">
                   {testimonial.quote}
                 </p>
 

@@ -94,11 +94,11 @@ function TabletHeroSection() {
           <h1 className="font-georgia text-3xl font-normal text-[#1c1c1c] mb-4 leading-[0.99]">
             Where grown-ups remember how to play
           </h1>
-          <p className="font-sofia-pro text-base font-normal text-[#1c1c1c] mb-6 leading-relaxed">
+          <p className="font-helvetica text-base font-normal text-[#1c1c1c] mb-6 leading-relaxed">
             A set of hand-crafted immersive experiences for your team and
             leadership.
           </p>
-          <p className="font-sofia-pro text-sm font-light text-[#1c1c1c] leading-relaxed">
+          <p className="font-helvetica text-sm font-light text-[#1c1c1c] leading-relaxed">
             You never learn better than when you don't know that you are
             learning. Through play, touch, wonder, and experimentation, we help
             teams unlearn biases, collaborate organically, and see challenges

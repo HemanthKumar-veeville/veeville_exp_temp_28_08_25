@@ -21,12 +21,12 @@ const DesktopContent = () => {
           lineHeight: "normal",
         }}
       >
-        <p className="font-sofia-pro text-[28px] text-[#1c1c1c]">
+        <p className="font-helvetica text-[#1c1c1c]">
           A set of hand-crafted immersive experiences for your team and
           leadership.
         </p>
 
-        <p className="font-sofia-pro text-[28px] text-[#1c1c1c]">
+        <p className="font-helvetica text-[#1c1c1c]">
           You never learn better than when you don't know that you are learning.
           Through play, touch, wonder, and experimentation, we help teams
           unlearn biases, collaborate organically, and see challenges with fresh
@@ -80,12 +80,12 @@ const TabletContent = () => {
       </h1>
 
       <div className="space-y-4">
-        <p className="font-sofia-pro font-normal text-base md:text-lg text-[#1c1c1c] leading-relaxed">
+        <p className="font-helvetica font-normal text-base md:text-lg text-[#1c1c1c] leading-relaxed">
           A set of hand-crafted immersive experiences for your team and
           leadership.
         </p>
 
-        <p className="font-sofia-pro font-normal text-base md:text-lg text-[#1c1c1c] leading-relaxed">
+        <p className="font-helvetica font-normal text-base md:text-lg text-[#1c1c1c] leading-relaxed">
           You never learn better than when you don't know that you are learning.
           Through play, touch, wonder, and experimentation, we help teams
           unlearn biases, collaborate organically, and see challenges with fresh
@@ -134,12 +134,12 @@ const MobileContent = () => {
       </h1>
 
       <div className="space-y-3 mb-6">
-        <p className="font-sofia-pro font-normal text-sm sm:text-base text-[#1c1c1c] leading-relaxed">
+        <p className="font-helvetica font-normal text-sm sm:text-base text-[#1c1c1c] leading-relaxed">
           A set of hand-crafted immersive experiences for your team and
           leadership.
         </p>
 
-        <p className="font-sofia-pro font-normal text-sm sm:text-base text-[#1c1c1c] leading-relaxed">
+        <p className="font-helvetica font-normal text-sm sm:text-base text-[#1c1c1c] leading-relaxed">
           You never learn better than when you don't know that you are learning.
           Through play, touch, wonder, and experimentation, we help teams
           unlearn biases, collaborate organically, and see challenges with fresh

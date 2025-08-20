@@ -61,12 +61,12 @@ function ValuePropositionMobileSection() {
             </h1>
 
             <div className="space-y-3 mb-6 w-[80vw] ">
-              <p className="font-sofia-pro font-normal text-sm sm:text-base text-[#1c1c1c] leading-relaxed">
+              <p className="font-helvetica font-normal text-sm sm:text-base text-[#1c1c1c] leading-relaxed">
                 A set of hand-crafted immersive experiences for your team and
                 leadership.
               </p>
 
-              <p className="font-sofia-pro font-normal text-sm sm:text-base text-[#1c1c1c] leading-relaxed">
+              <p className="font-helvetica font-normal text-sm sm:text-base text-[#1c1c1c] leading-relaxed">
                 You never learn better than when you don't know that you are
                 learning. Through play, touch, wonder, and experimentation, we
                 help teams unlearn biases, collaborate organically, and see

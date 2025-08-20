@@ -20,20 +20,20 @@ function FormField({
 }: FormFieldProps) {
   return (
     <div className={`mb-4 ${className}`}>
-      <label className="block font-sofia-pro font-light text-white mb-2 lg:text-[18px] text-[9px] lg:leading-[20px] leading-[13px]">
+      <label className="block font-helvetica font-light text-white mb-2 lg:text-[18px] text-[9px] lg:leading-[20px] leading-[13px]">
         {label}
       </label>
       <div className="relative">
         {isTextarea ? (
           <textarea
             placeholder={placeholder}
-            className="w-full bg-transparent border-b border-white text-white placeholder-white font-sofia-pro font-light lg:text-[16px] text-[8px] lg:leading-[20px] leading-[15px] py-2 focus:outline-none resize-none h-[60px]"
+            className="w-full bg-transparent border-b border-white text-white placeholder-white font-helvetica font-light lg:text-[16px] text-[8px] lg:leading-[20px] leading-[15px] py-2 focus:outline-none resize-none h-[60px]"
           />
         ) : (
           <input
             type={type}
             placeholder={placeholder}
-            className="w-full bg-transparent border-b border-white text-white placeholder-white font-sofia-pro font-light lg:text-[16px] text-[8px] lg:leading-[20px] leading-[15px] py-2 focus:outline-none"
+            className="w-full bg-transparent border-b border-white text-white placeholder-white font-helvetica font-light lg:text-[16px] text-[8px] lg:leading-[20px] leading-[15px] py-2 focus:outline-none"
           />
         )}
       </div>
@@ -80,7 +80,7 @@ export default function ContactForm() {
             <div className="pt-4">
               <button
                 type="submit"
-                className="bg-white text-[#2d2d2d] font-sofia-pro font-bold lg:text-[24px] text-[9px] lg:px-[80px] px-[40px] lg:py-[14px] py-[8px] rounded-full hover:bg-gray-100 transition-colors"
+                className="bg-white text-[#2d2d2d] font-helvetica font-bold lg:text-[24px] text-[9px] lg:px-[80px] px-[40px] lg:py-[14px] py-[8px] rounded-full hover:bg-gray-100 transition-colors"
               >
                 Send Message
               </button>

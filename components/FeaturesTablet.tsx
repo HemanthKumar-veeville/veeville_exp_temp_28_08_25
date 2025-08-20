@@ -19,7 +19,7 @@ function FeatureItem({
   return (
     <div className={`flex flex-col ${className}`}>
       <h3
-        className={`font-sofia-pro font-semibold text-[20px] lg:text-[24px] text-black mb-[20px] lg:mb-[25px] break-words transition-all duration-1000 ease-out ${
+        className={`font-helvetica font-semibold text-[20px] lg:text-[24px] text-black mb-[20px] lg:mb-[25px] break-words transition-all duration-1000 ease-out ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
         }`}
       >
@@ -46,14 +46,14 @@ function FeatureItem({
         {Array.isArray(description) ? (
           description.map((line, index) => (
             <React.Fragment key={index}>
-              <p className="font-sofia-pro font-light text-[16px] lg:text-[20px] text-black leading-[1.3] lg:leading-normal break-words">
+              <p className="font-helvetica font-light text-[16px] lg:text-[20px] text-black leading-[1.3] lg:leading-normal break-words">
                 {line}
               </p>
               {index < description.length - 1 && <br />}
             </React.Fragment>
           ))
         ) : (
-          <p className="font-sofia-pro font-light text-[16px] lg:text-[20px] text-black leading-[1.3] lg:leading-normal break-words">
+          <p className="font-helvetica font-light text-[16px] lg:text-[20px] text-black leading-[1.3] lg:leading-normal break-words">
             {description}
           </p>
         )}

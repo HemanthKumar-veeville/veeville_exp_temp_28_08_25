@@ -1,151 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Local Sofia Pro Font Face Declarations */
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro UltraLight Az.otf') format('opentype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro UltraLight Italic Az.otf') format('opentype');
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro ExtraLight Az.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro ExtraLight Italic Az.otf') format('opentype');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Light Az.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Light Italic Az.otf') format('opentype');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Regular Az.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Regular Italic Az.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Medium Az.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Medium Italic Az.otf') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Semi Bold Az.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Semi Bold Italic Az.otf') format('opentype');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Bold Az.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Bold Italic Az.otf') format('opentype');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Black Az.otf') format('opentype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Black Italic Az.otf') format('opentype');
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* CasualHuman Font Face Declarations */
-@font-face {
-  font-family: 'CasualHuman';
-  src: url('/fonts/CasualHuman-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CasualHuman';
-  src: url('/fonts/CasualHuman-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+/* Helvetica Font Family - System Font */
+/* Helvetica is available on most systems, no need for external font files */
 
 /* Import Google Fonts for Georgia and Comic Neue (keeping these as fallbacks) */
 @import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap');
@@ -265,17 +122,17 @@
   --color-veeville-accent-orange: var(--veeville-accent-orange);
 }
 
-/* Typography utilities matching Figma exactly */
+/* Typography utilities updated for Helvetica */
 @utility font-georgia {
   font-family: 'Georgia', serif;
 }
 
-@utility font-sofia-pro {
-  font-family: 'Sofia Pro', sans-serif;
+@utility font-helvetica {
+  font-family: 'Helvetica', 'Arial', sans-serif;
   color: #000;
-  font-size: 28px;
+  font-size: 25px;
   font-style: normal;
-  font-weight: 300;
+  /* font-weight: 300; */
   line-height: normal;
 }
 
@@ -284,39 +141,39 @@
   font-weight: 700;
 }
 
-/* Figma-specific font weights for Sofia Pro */
-@utility font-sofia-light {
-  font-family: 'Sofia Pro', sans-serif;
+/* Helvetica font weights */
+@utility font-helvetica-light {
+  font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: 300;
 }
 
-@utility font-sofia-regular {
-  font-family: 'Sofia Pro', sans-serif;
-  font-weight: 433;
+@utility font-helvetica-regular {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
 }
 
-@utility font-sofia-medium {
-  font-family: 'Sofia Pro', sans-serif;
+@utility font-helvetica-medium {
+  font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: 500;
 }
 
-@utility font-sofia-semibold {
-  font-family: 'Sofia Pro', sans-serif;
-  font-weight: 622;
+@utility font-helvetica-semibold {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 600;
 }
 
-@utility font-sofia-bold {
-  font-family: 'Sofia Pro', sans-serif;
-  font-weight: 727;
+@utility font-helvetica-bold {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 700;
 }
 
 /* Additional font weight utilities for Tailwind compatibility */
 @utility font-light {
-  font-weight: 296;
+  font-weight: 300;
 }
 
 @utility font-normal {
-  font-weight: 433;
+  font-weight: 400;
 }
 
 @utility font-medium {
@@ -324,11 +181,11 @@
 }
 
 @utility font-semibold {
-  font-weight: 622;
+  font-weight: 600;
 }
 
 @utility font-bold {
-  font-weight: 727;
+  font-weight: 700;
 }
 
 /* Exact line heights from Figma */
@@ -355,7 +212,7 @@
   }
   
   body {
-    @apply bg-background text-foreground font-sofia-pro;
+    @apply bg-background text-foreground font-helvetica;
     margin: 0;
     padding: 0;
     overflow-x: hidden;

@@ -21,7 +21,7 @@ function FeatureItem({
       {/* Desktop Layout */}
       <div className="hidden lg:block h-full max-h-full">
         <h3
-          className={`text-black font-[622] font-sofia-pro text-[28px] not-italic leading-normal break-words transition-all duration-1000 ease-out ${
+          className={`text-black font-[622] font-helvetica not-italic leading-normal break-words transition-all duration-1000 ease-out ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -48,16 +48,12 @@ function FeatureItem({
           {Array.isArray(description) ? (
             description.map((line, index) => (
               <React.Fragment key={index}>
-                <p className="text-black font-sofia-light text-[28px]">
-                  {line}
-                </p>
+                <p className="text-black font-sofia-light">{line}</p>
                 {index < description.length - 1 && <br />}
               </React.Fragment>
             ))
           ) : (
-            <p className="text-black font-sofia-light text-[28px]">
-              {description}
-            </p>
+            <p className="text-black font-sofia-light">{description}</p>
           )}
         </div>
       </div>
@@ -65,7 +61,7 @@ function FeatureItem({
       {/* Tablet Layout */}
       <div className="hidden md:block lg:hidden">
         <h3
-          className={`font-sofia-pro font-semibold text-[20px] lg:text-[24px] text-black mb-[20px] lg:mb-[25px] break-words transition-all duration-1000 ease-out ${
+          className={`font-helvetica font-semibold text-[20px] lg:text-[24px] text-black mb-[20px] lg:mb-[25px] break-words transition-all duration-1000 ease-out ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -85,7 +81,7 @@ function FeatureItem({
           />
         </div>
         <p
-          className={`font-sofia-pro font-light text-[16px] lg:text-[20px] text-black leading-[1.3] lg:leading-normal break-words transition-all duration-1000 ease-out delay-400 ${
+          className={`font-helvetica font-light text-[16px] lg:text-[20px] text-black leading-[1.3] lg:leading-normal break-words transition-all duration-1000 ease-out delay-400 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -96,7 +92,7 @@ function FeatureItem({
       {/* Mobile Layout */}
       <div className="md:hidden">
         <h3
-          className={`font-sofia-pro font-semibold text-[14px] sm:text-[16px] text-black mb-[12px] sm:mb-[15px] break-words transition-all duration-1000 ease-out ${
+          className={`font-helvetica font-semibold text-[14px] sm:text-[16px] text-black mb-[12px] sm:mb-[15px] break-words transition-all duration-1000 ease-out ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -116,7 +112,7 @@ function FeatureItem({
           />
         </div>
         <p
-          className={`font-sofia-pro font-light text-[14px] sm:text-[16px] text-black leading-[1.4] break-words transition-all duration-1000 ease-out delay-400 ${
+          className={`font-helvetica font-light text-[14px] sm:text-[16px] text-black leading-[1.4] break-words transition-all duration-1000 ease-out delay-400 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
