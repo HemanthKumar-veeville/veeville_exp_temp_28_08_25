@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
-import DeviceDetector from "../components/DeviceDetector";
 
 export const metadata: Metadata = {
   title: "Veeville - Where grown-ups remember how to play",
@@ -24,9 +23,7 @@ export default function RootLayout({
         <meta name="referrer" content="strict-origin-when-cross-origin" />
       </head>
       <body>
-        <DeviceDetector>
-          <main>{children}</main>
-        </DeviceDetector>
+        <main>{children}</main>
       </body>
     </html>
   );
