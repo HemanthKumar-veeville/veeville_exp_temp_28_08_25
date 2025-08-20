@@ -4,16 +4,26 @@ import { H1 } from "./Headings";
 import { HelveticaDescription } from "./Descriptions";
 
 // Content Component with responsive text sizes
-const Content = () => {
+const Content = ({ isVisible }: { isVisible: boolean }) => {
   return (
     <div className="order-1 xl:order-1 xl:col-span-3">
-      <H1>
-        Where grown-ups
-        <br />
-        remember how to play
-      </H1>
+      <div
+        className={`transition-all duration-2400 ease-out delay-300 ${
+          isVisible ? "opacity-100" : "opacity-0 invisible"
+        }`}
+      >
+        <H1>
+          Where grown-ups
+          <br />
+          remember how to play
+        </H1>
+      </div>
 
-      <div className="space-y-3 md:space-y-4 lg:space-y-5 xl:space-y-6">
+      <div
+        className={`space-y-3 md:space-y-4 lg:space-y-5 xl:space-y-6 transition-all duration-2400 ease-out delay-600 ${
+          isVisible ? "opacity-100" : "opacity-0 invisible"
+        }`}
+      >
         <HelveticaDescription className="text-[#1c1c1c]">
           A set of hand-crafted immersive experiences for your team and
           leadership.
@@ -36,7 +46,9 @@ const ValueImage = ({ isVisible }: { isVisible: boolean }) => {
     <div className="order-2 xl:order-2 xl:col-span-2 flex justify-center xl:justify-end items-center">
       <div
         className={`relative w-full max-w-[180px] sm:max-w-[220px] md:max-w-xs lg:max-w-sm xl:max-w-md 2xl:max-w-lg transition-all duration-2400 ease-out ${
-          isVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+          isVisible
+            ? "translate-x-0 opacity-100"
+            : "translate-x-full opacity-0 invisible"
         }`}
       >
         <Image
@@ -57,7 +69,7 @@ const Layout = ({ isVisible }: { isVisible: boolean }) => {
   return (
     <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-6 lg:px-8 xl:px-12 w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6 xl:gap-8 items-center h-full">
-        <Content />
+        <Content isVisible={isVisible} />
         <ValueImage isVisible={isVisible} />
       </div>
     </div>

@@ -22,14 +22,18 @@ function FeatureItem({
     <div className={`flex flex-col ${className}`}>
       <H3
         className={`transition-all duration-1000 ease-out ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          isVisible
+            ? "translate-y-0 opacity-100"
+            : "translate-y-8 opacity-0 invisible"
         }`}
       >
         {title}
       </H3>
       <div
         className={`mb-[10px] sm:mb-[12px] md:mb-[15px] lg:mb-[15px] xl:mb-[17px] flex justify-center transition-all duration-1000 ease-out delay-200 ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          isVisible
+            ? "translate-y-0 opacity-100"
+            : "translate-y-8 opacity-0 invisible"
         }`}
       >
         <Image
@@ -42,7 +46,9 @@ function FeatureItem({
       </div>
       <div
         className={`transition-all duration-1000 ease-out delay-400 ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          isVisible
+            ? "translate-y-0 opacity-100"
+            : "translate-y-8 opacity-0 invisible"
         }`}
       >
         {Array.isArray(description) ? (

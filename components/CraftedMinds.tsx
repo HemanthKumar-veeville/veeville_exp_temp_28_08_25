@@ -1,11 +1,62 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { H2 } from "./Headings";
 import { HelveticaDescription, CasualHumanDescription } from "./Descriptions";
 
 const CraftedMinds: React.FC = () => {
+  const [headingVisible, setHeadingVisible] = useState(false);
+  const [subheadingVisible, setSubheadingVisible] = useState(false);
+  const [categoriesVisible, setCategoriesVisible] = useState(false);
+  const [quoteVisible, setQuoteVisible] = useState(false);
+  const [imageVisible, setImageVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            // Animate elements one by one with staggered timing
+            setTimeout(() => setHeadingVisible(true), 300);
+            setTimeout(() => setImageVisible(true), 600);
+            setTimeout(() => {
+              setSubheadingVisible(true);
+              setCategoriesVisible(true);
+            }, 2400); // 600ms + 1800ms (image animation duration)
+            setTimeout(() => setQuoteVisible(true), 2700); // 2400ms + 300ms
+            setHasAnimated(true);
+          } else if (!entry.isIntersecting && hasAnimated) {
+            // Reset animation states instantly when component goes out of view
+            setHeadingVisible(false);
+            setSubheadingVisible(false);
+            setCategoriesVisible(false);
+            setQuoteVisible(false);
+            setImageVisible(false);
+            setHasAnimated(false);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "0px",
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
   return (
     <div
+      ref={sectionRef}
       className="w-full min-h-screen bg-[#d9d9d9] p-8"
       data-name="crafted_minds"
     >
@@ -16,18 +67,46 @@ const CraftedMinds: React.FC = () => {
           {/* Left half - Text content including heading */}
           <div className="flex-1">
             {/* Main heading - "Crafted for the minds that matter" */}
-            <H2 className="mb-[35px] leading-[0.99] text-black w-[48rem]">
+            <H2
+              className={`mb-[35px] leading-[0.99] text-black w-[48rem] ${
+                headingVisible ? "transition-all duration-1800 ease-out" : ""
+              } ${
+                headingVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-8 opacity-0 invisible"
+              }`}
+            >
               Crafted for the minds that matter
             </H2>
 
             <div className="flex flex-col gap-4">
               {/* Subheading - "Bespoke experience for" */}
-              <HelveticaDescription className="font-helvetica-light text-2xl md:text-3xl lg:text-[37px] leading-normal text-[#000000]">
+              <HelveticaDescription
+                className={`font-helvetica-light text-2xl md:text-3xl lg:text-[37px] leading-normal text-[#000000] ${
+                  subheadingVisible
+                    ? "transition-all duration-1800 ease-out"
+                    : ""
+                } ${
+                  subheadingVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-8 opacity-0 invisible"
+                }`}
+              >
                 Bespoke experience for
               </HelveticaDescription>
 
               {/* Three category words */}
-              <div className="flex flex-wrap gap-8 lg:gap-16 lg:justify-between lg:w-[48rem]">
+              <div
+                className={`flex flex-wrap gap-8 lg:gap-16 lg:justify-between lg:w-[48rem] ${
+                  categoriesVisible
+                    ? "transition-all duration-1800 ease-out"
+                    : ""
+                } ${
+                  categoriesVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-8 opacity-0 invisible"
+                }`}
+              >
                 {["Management", "Teams", "Leadership"].map((category, idx) => (
                   <CasualHumanDescription
                     key={category}
@@ -55,7 +134,15 @@ const CraftedMinds: React.FC = () => {
               </div>
 
               {/* Quote section */}
-              <div className="flex flex-col gap-4 mt-8 w-[23rem]">
+              <div
+                className={`flex flex-col gap-4 mt-8 w-[23rem] ${
+                  quoteVisible ? "transition-all duration-1800 ease-out" : ""
+                } ${
+                  quoteVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-8 opacity-0 invisible"
+                }`}
+              >
                 <CasualHumanDescription>
                   GIVE ME SIX Hours To CHOP A TREE
                   <br />
@@ -71,7 +158,15 @@ const CraftedMinds: React.FC = () => {
           </div>
 
           {/* Right half - Image */}
-          <div className="flex-1 h-full flex items-center justify-center">
+          <div
+            className={`flex-1 h-full flex items-center justify-center ${
+              imageVisible ? "transition-all duration-1800 ease-out" : ""
+            } ${
+              imageVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-full opacity-0 invisible"
+            }`}
+          >
             <Image
               src="/images/pokemon_pencil.png"
               alt="Brochure Inside Layout"

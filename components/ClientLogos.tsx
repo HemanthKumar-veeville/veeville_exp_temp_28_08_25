@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { H2 } from "./Headings";
 
@@ -46,9 +46,11 @@ const clientLogos = [
 const ClientLogo = ({
   client,
   isMobile = false,
+  isVisible = false,
 }: {
   client: (typeof clientLogos)[0];
   isMobile?: boolean;
+  isVisible?: boolean;
 }) => {
   const imageWidth = isMobile ? Math.floor(client.width * 0.4) : client.width;
   const imageHeight = isMobile
@@ -56,7 +58,13 @@ const ClientLogo = ({
     : client.height;
 
   return (
-    <div className="flex items-center justify-center">
+    <div
+      className={`flex items-center justify-center transition-all duration-1000 ease-out ${
+        isVisible
+          ? "translate-y-0 opacity-100"
+          : "translate-y-8 opacity-0 invisible"
+      }`}
+    >
       <Image
         src={client.src}
         alt={client.name}
@@ -78,13 +86,65 @@ const ClientLogo = ({
 
 // Desktop Layout Component
 const DesktopClientLogos = () => {
+  const [logoStates, setLogoStates] = useState<boolean[]>(
+    new Array(12).fill(false)
+  );
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            // Animate logos one by one with staggered timing
+            const timeouts: NodeJS.Timeout[] = [];
+            for (let i = 0; i < 12; i++) {
+              timeouts.push(
+                setTimeout(() => {
+                  setLogoStates((prev) => {
+                    const newStates = [...prev];
+                    newStates[i] = true;
+                    return newStates;
+                  });
+                }, 500 + i * 150)
+              );
+            }
+            setHasAnimated(true);
+          } else if (!entry.isIntersecting && hasAnimated) {
+            // Reset animation states when component goes out of view
+            setLogoStates(new Array(12).fill(false));
+            setHasAnimated(false);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "0px",
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
   // Split logos into rows as requested
   const firstRow = clientLogos.slice(0, 3); // GE HealthCare, PepsiCo, HP Enterprise
   const secondRow = clientLogos.slice(3, 7); // GSK, Springer Nature, Wrangler, Dell
   const thirdRow = clientLogos.slice(7); // Shell, Levi's, Titan, Lee, Myntra
 
   return (
-    <section className="hidden lg:block w-full bg-white py-[25px]">
+    <section
+      ref={sectionRef}
+      className="hidden lg:block w-full bg-white py-[25px]"
+    >
       <div className="max-w-[1440px] mx-auto px-[60px]">
         <H2 className="text-[80px] leading-[0.99] text-black mb-[50px]">
           Our clients
@@ -94,22 +154,34 @@ const DesktopClientLogos = () => {
         <div className="space-y-[50px]">
           {/* First row - 3 logos */}
           <div className="grid grid-cols-3 gap-x-[60px] items-center justify-items-center">
-            {firstRow.map((client) => (
-              <ClientLogo key={client.name} client={client} />
+            {firstRow.map((client, index) => (
+              <ClientLogo
+                key={client.name}
+                client={client}
+                isVisible={logoStates[index]}
+              />
             ))}
           </div>
 
           {/* Second row - 4 logos */}
           <div className="grid grid-cols-4 gap-x-[60px] items-center justify-items-center">
-            {secondRow.map((client) => (
-              <ClientLogo key={client.name} client={client} />
+            {secondRow.map((client, index) => (
+              <ClientLogo
+                key={client.name}
+                client={client}
+                isVisible={logoStates[index + 3]}
+              />
             ))}
           </div>
 
           {/* Third row - 5 logos */}
           <div className="grid grid-cols-5 gap-x-[60px] items-center justify-items-center">
-            {thirdRow.map((client) => (
-              <ClientLogo key={client.name} client={client} />
+            {thirdRow.map((client, index) => (
+              <ClientLogo
+                key={client.name}
+                client={client}
+                isVisible={logoStates[index + 7]}
+              />
             ))}
           </div>
         </div>
@@ -120,8 +192,57 @@ const DesktopClientLogos = () => {
 
 // Mobile Layout Component
 const MobileClientLogos = () => {
+  const [logoStates, setLogoStates] = useState<boolean[]>(
+    new Array(12).fill(false)
+  );
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            // Animate logos one by one with staggered timing
+            const timeouts: NodeJS.Timeout[] = [];
+            for (let i = 0; i < 12; i++) {
+              timeouts.push(
+                setTimeout(() => {
+                  setLogoStates((prev) => {
+                    const newStates = [...prev];
+                    newStates[i] = true;
+                    return newStates;
+                  });
+                }, 500 + i * 150)
+              );
+            }
+            setHasAnimated(true);
+          } else if (!entry.isIntersecting && hasAnimated) {
+            // Reset animation states when component goes out of view
+            setLogoStates(new Array(12).fill(false));
+            setHasAnimated(false);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "0px",
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
   return (
-    <section className="lg:hidden w-full bg-white py-[40px]">
+    <section ref={sectionRef} className="lg:hidden w-full bg-white py-[40px]">
       <div className="px-[30px]">
         <H2 className="text-[25px] leading-[0.99] text-black mb-[30px]">
           Our clients
@@ -129,8 +250,13 @@ const MobileClientLogos = () => {
 
         {/* Client Logos Grid - 2 columns for mobile */}
         <div className="grid grid-cols-2 gap-x-[20px] gap-y-[30px] items-center justify-center">
-          {clientLogos.map((client) => (
-            <ClientLogo key={client.name} client={client} isMobile={true} />
+          {clientLogos.map((client, index) => (
+            <ClientLogo
+              key={client.name}
+              client={client}
+              isMobile={true}
+              isVisible={logoStates[index]}
+            />
           ))}
         </div>
       </div>
