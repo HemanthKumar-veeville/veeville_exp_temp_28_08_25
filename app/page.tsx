@@ -10,6 +10,8 @@ import ContactForm from "@/components/ContactForm";
 import CraftedMinds from "@/components/CraftedMinds";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import WhatShifts from "@/components/WhatShifts";
+import HighFiveMethodology from "@/components/HighFiveMethodology";
+import Rediscover from "@/components/Rediscover";
 
 export default function Home() {
   return (
@@ -37,6 +39,14 @@ export default function Home() {
           </div>
           <div id="crafted-minds" className="snap-start min-h-screen">
             <WhatShifts />
+          </div>
+
+          <div id="high-five-methodology" className="snap-start min-h-screen">
+            <HighFiveMethodology />
+          </div>
+
+          <div id="rediscover" className="snap-start min-h-screen">
+            <Rediscover />
           </div>
 
           {/* <div id="target-audience" className="snap-start min-h-screen">
