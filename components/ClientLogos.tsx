@@ -128,7 +128,7 @@ const MobileClientLogos = () => {
         </H2>
 
         {/* Client Logos Grid - 2 columns for mobile */}
-        <div className="grid grid-cols-2 gap-x-[20px] gap-y-[30px] items-center justify-items-center">
+        <div className="grid grid-cols-2 gap-x-[20px] gap-y-[30px] items-center justify-center">
           {clientLogos.map((client) => (
             <ClientLogo key={client.name} client={client} isMobile={true} />
           ))}

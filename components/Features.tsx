@@ -113,7 +113,7 @@ export default function Features() {
       className="w-full bg-white py-[30px] sm:py-[40px] md:py-[40px] lg:py-[25px] xl:py-[30px] overflow-hidden h-full max-h-screen"
     >
       <div className="px-[16px] sm:px-[20px] md:px-[30px] lg:px-[40px] xl:px-[60px] max-w-[1440px] mx-auto">
-        <H2 className="text-[80px] leading-[0.99] text-black mb-[50px]">
+        <H2 className="leading-[0.99] text-black mb-[50px]">
           The premise of play
         </H2>
         <div className="space-y-[30px] sm:space-y-[40px] md:grid md:grid-cols-3 md:gap-[20px] lg:gap-[40px] lg:grid-cols-3 lg:gap-[40px] xl:gap-[60px] 2xl:gap-[160px]">

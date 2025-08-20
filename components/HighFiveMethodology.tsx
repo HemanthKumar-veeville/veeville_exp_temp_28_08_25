@@ -10,7 +10,7 @@ const HighFiveMethodology: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Row 1: Heading */}
         <div>
-          <H2 className="font-helvetica text-[40px] md:text-[60px] lg:text-[80px] text-black leading-[0.99] font-normal mb-[35px]">
+          <H2 className="font-helvetica text-black leading-[0.99] font-normal mb-[35px]">
             The high-five methodology
           </H2>
         </div>

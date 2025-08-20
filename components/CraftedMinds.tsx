@@ -16,7 +16,7 @@ const CraftedMinds: React.FC = () => {
           {/* Left half - Text content including heading */}
           <div className="flex-1">
             {/* Main heading - "Crafted for the minds that matter" */}
-            <H2 className="mb-[35px] text-[80px] leading-[0.99] text-black w-[48rem]">
+            <H2 className="mb-[35px] leading-[0.99] text-black w-[48rem]">
               Crafted for the minds that matter
             </H2>
 

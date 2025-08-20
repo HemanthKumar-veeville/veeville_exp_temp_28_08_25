@@ -76,17 +76,6 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
-
-          {/* Testimonials Group Illustration */}
-          <div className="flex justify-center">
-            <Image
-              src="/images/testimonials-group.svg"
-              alt="Group of happy people testimonials"
-              width={306}
-              height={205}
-              className="object-contain"
-            />
-          </div>
         </div>
       </section>
     </>

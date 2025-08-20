@@ -10,7 +10,7 @@ const WhatShifts: React.FC = () => {
         {/* Header section */}
         <div className="mb-8">
           {/* Main heading - "What shifts" */}
-          <H2 className="mb-[35px] text-[80px] leading-[0.99] text-black w-[48rem]">
+          <H2 className="mb-[35px] leading-[0.99] text-black w-[48rem]">
             What shifts
           </H2>
         </div>
