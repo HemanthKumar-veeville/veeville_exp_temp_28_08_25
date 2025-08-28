@@ -25,7 +25,7 @@ export const H2: React.FC<HeadingProps> = ({
 }) => {
   return (
     <h2
-      className={`font-georgia leading-[1.1] lg:leading-[0.99] text-black  break-words ${className}  text-[40px] md:text-[60px] lg:text-[80px]`}
+      className={`font-georgia leading-[1.1] lg:leading-[0.99] text-black  break-words ${className}  text-[40px] md:text-[60px] lg:text-[60px]`}
       style={style}
     >
       {children}
